@@ -121,3 +121,59 @@
         }
     }
 }
+
+.why-us {
+    background: $black;
+    color: $white;
+    padding: 4rem 0;
+    text-align: center;
+
+    &__text-secondary {
+        margin-bottom: .5rem;
+        color: $red;
+        font-size: 1rem;
+    }
+
+    &__text-main {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    &__advantages {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        list-style: none;
+    }
+
+    &__advantage {
+        padding: 1rem;
+
+        &:hover &-icon {
+            background: $red;
+            color: $white;
+        }
+
+        &-icon {
+            font-size: 2rem;
+            padding: 1rem;
+            background: $dark-gray;
+            border-radius: 50%;
+            color: $red;
+            transition: .25s ease-in-out;
+            margin-bottom: 1rem;
+        }
+
+        &-title {
+            margin-bottom: 1rem;
+        }
+
+        &-text {
+            color: $gray;
+            font-size: .9rem;
+        }
+    }
+}

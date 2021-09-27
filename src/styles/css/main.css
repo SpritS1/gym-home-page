@@ -107,3 +107,51 @@
   background: unset;
   border: 2px solid #c93636;
 }
+
+.why-us {
+  background: #0d0d0d;
+  color: #f2f2f2;
+  padding: 4rem 0;
+  text-align: center;
+}
+.why-us__text-secondary {
+  margin-bottom: 0.5rem;
+  color: #c93636;
+  font-size: 1rem;
+}
+.why-us__text-main {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.why-us__advantages {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  list-style: none;
+}
+.why-us__advantage {
+  padding: 1rem;
+}
+.why-us__advantage:hover .why-us__advantage-icon {
+  background: #c93636;
+  color: #f2f2f2;
+}
+.why-us__advantage-icon {
+  font-size: 2rem;
+  padding: 1rem;
+  background: #333333;
+  border-radius: 50%;
+  color: #c93636;
+  transition: 0.25s ease-in-out;
+  margin-bottom: 1rem;
+}
+.why-us__advantage-title {
+  margin-bottom: 1rem;
+}
+.why-us__advantage-text {
+  color: #cccccc;
+  font-size: 0.9rem;
+}

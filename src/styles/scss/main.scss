@@ -1,0 +1,123 @@
+@use 'fonts';
+@use 'variables' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+
+    &__logo {
+        text-decoration: none;
+        padding-left: 2rem;
+    }
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        color: $white;
+
+        &-item {
+            font-size: 1.25rem;
+            padding: .5rem 1rem;
+
+            &:after {
+                display: block;
+                content: '';
+                border-bottom: solid 1px $red;  
+                transform: scaleX(0) translateY(.5rem);  
+                transition: transform 250ms ease-in-out;
+            }
+
+            &:hover:after {
+                transform: scaleX(1) translateY(.5rem);  
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &.active {
+                cursor: default;
+                &:after {
+                    transform: scaleX(1) translateY(.5rem);  
+                }
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        list-style: none;
+        color: $white;
+        padding-right: 2rem;
+
+        &-icon {
+            padding: .5rem;
+        }
+    }
+}
+
+.landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), center no-repeat url('../../images/landing_woman.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    
+    &__text {
+        padding: 30vh 0 0 10rem;
+        color: $white;
+
+        &-top {
+            font-size: 1.25rem;
+            margin-bottom: .5rem;
+            position: relative;
+            
+            &::before {
+                content: '';
+                border-left: 2px solid $red;
+                height: 100%;
+                position: absolute;
+                left: -1rem;
+            }
+        }
+
+        &-main {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        &-main--color {
+            font-size: 4rem;
+            font-weight: bold;
+            color: $red;
+        }
+    }
+
+    &__cta-btn {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border: 2px solid $red;
+        background: $red;
+        color: $white;
+        border-radius: 8px;
+        transition: .25s;
+        cursor: pointer;
+
+        &:hover {
+            background: unset;
+            // color: $red;
+            border: 2px solid $red;
+        }
+    }
+}

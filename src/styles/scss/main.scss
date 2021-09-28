@@ -8,7 +8,8 @@
 }
 
 .nav {
-    position: fixed;
+    position: absolute;
+    overflow: hidden;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -63,6 +64,12 @@
 
         &-icon {
             padding: .5rem;
+            transition: .5s;
+            cursor: pointer;
+
+            &:hover {
+                color: $red;
+            }
         }
     }
 }
@@ -124,7 +131,6 @@
         border: 2px solid $red;
         background: $red;
         color: $white;
-        border-radius: 8px;
         transition: .25s;
         cursor: pointer;
 
@@ -145,13 +151,14 @@
     &__text-secondary {
         margin-bottom: .5rem;
         color: $red;
-        font-size: 1rem;
+        text-transform: uppercase;
     }
 
     &__text-main {
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 2rem;
+        text-transform: uppercase;
     }
 
     &__advantages {
@@ -172,8 +179,8 @@
         }
 
         &-icon {
-            font-size: 2rem;
-            padding: 1rem;
+            font-size: 2.5rem;
+            padding: 1.5rem;
             background: $dark-gray;
             border-radius: 50%;
             color: $red;
@@ -188,6 +195,14 @@
         &-text {
             color: $gray;
             font-size: .9rem;
+        }
+    }
+}
+
+@media screen and (min-width: $small) {
+    .nav {
+        &__menu {
+            display: none;
         }
     }
 }

@@ -1,5 +1,6 @@
 @use 'fonts';
 @use 'variables' as *;
+@use 'mixins' as *;
 
 * {
     box-sizing: border-box;
@@ -22,6 +23,7 @@
     }
 
     &__bars {
+        display: inline-block;
         color: $white;
         font-size: 2rem;
         padding-right: 1.5rem;
@@ -220,12 +222,8 @@
     &__cta-btn {
         margin-top: 2rem;
         font-size: 1.5rem;
-        padding: 1rem;
-        border: 2px solid $red;
-        background: $red;
-        color: $white;
+        @include buttonRed;
         transition: .25s;
-        cursor: pointer;
 
         &:hover {
             background: unset;
@@ -238,18 +236,20 @@
 .why-us {
     background: $black;
     color: $white;
-    padding: 4rem 0;
+    padding: 6rem 0;
     text-align: center;
 
     &__text-secondary {
         margin-bottom: .5rem;
         color: $red;
         text-transform: uppercase;
+        font-size: 1.1rem;
     }
 
     &__text-main {
         font-size: 1.5rem;
         font-weight: bold;
+        padding: 0 2rem;
         margin-bottom: 2rem;
         text-transform: uppercase;
     }
@@ -292,6 +292,71 @@
     }
 }
 
+.our-offer {
+    background: $black-accent;
+    color: $white;
+    padding: 6rem 0;
+
+    &__text-secondary {
+        color: $red;
+        text-transform: uppercase;
+        margin-bottom: .5rem;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    &__text-main {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    &__classes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+        max-width: 1200px;
+        list-style: none;
+    }
+
+    &__class {
+        background: $black;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        transition: transform .2s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        &-name {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        border-bottom: 4px solid $dark-gray;
+    }
+
+    &__cta-btn {
+        @include buttonRed;
+        font-size: 1.25rem;
+        padding: .5rem;
+    }
+}
+
 @media screen and (min-width: $small) {
     .landing {
         &__text {
@@ -328,7 +393,7 @@
 @media screen and (min-width: $large) {
     .nav {
         &__bars {
-            display: none;
+            display: none !important;
         }
 
         &__menu {

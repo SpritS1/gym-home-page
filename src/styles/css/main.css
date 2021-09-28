@@ -24,6 +24,7 @@
   padding-left: 1.5rem;
 }
 .nav__bars {
+  display: inline-block;
   color: #f2f2f2;
   font-size: 2rem;
   padding-right: 1.5rem;
@@ -190,12 +191,19 @@
 .landing__cta-btn {
   margin-top: 2rem;
   font-size: 1.5rem;
-  padding: 1rem;
-  border: 2px solid #c93636;
-  background: #c93636;
   color: #f2f2f2;
-  transition: 0.25s;
+  background: #c93636;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
   cursor: pointer;
+  border: 2px solid #c93636;
+  transition: 0.25s;
+  transition: 0.25s;
+}
+.landing__cta-btn:hover {
+  background: unset;
+  border: 2px solid #c93636;
 }
 .landing__cta-btn:hover {
   background: unset;
@@ -205,17 +213,19 @@
 .why-us {
   background: #0d0d0d;
   color: #f2f2f2;
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
 }
 .why-us__text-secondary {
   margin-bottom: 0.5rem;
   color: #c93636;
   text-transform: uppercase;
+  font-size: 1.1rem;
 }
 .why-us__text-main {
   font-size: 1.5rem;
   font-weight: bold;
+  padding: 0 2rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
@@ -251,6 +261,74 @@
   font-size: 0.9rem;
 }
 
+.our-offer {
+  background: #1a1a1a;
+  color: #f2f2f2;
+  padding: 6rem 0;
+}
+.our-offer__text-secondary {
+  color: #c93636;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.our-offer__text-main {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+.our-offer__classes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  list-style: none;
+}
+.our-offer__class {
+  background: #0d0d0d;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: transform 0.2s ease-in-out;
+}
+.our-offer__class:hover {
+  transform: scale(1.05);
+}
+.our-offer__class-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.our-offer__class-name {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.our-offer__img {
+  width: 100%;
+  border-bottom: 4px solid #333333;
+}
+.our-offer__cta-btn {
+  color: #f2f2f2;
+  background: #c93636;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: 2px solid #c93636;
+  transition: 0.25s;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+.our-offer__cta-btn:hover {
+  background: unset;
+  border: 2px solid #c93636;
+}
+
 @media screen and (min-width: 576px) {
   .landing__text {
     padding: 30vh 0 0 5rem;
@@ -274,7 +352,7 @@
 }
 @media screen and (min-width: 992px) {
   .nav__bars {
-    display: none;
+    display: none !important;
   }
   .nav__menu {
     display: flex;

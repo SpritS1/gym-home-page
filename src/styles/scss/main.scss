@@ -18,7 +18,81 @@
 
     &__logo {
         text-decoration: none;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    &__bars {
+        color: $white;
+        font-size: 2rem;
+        padding-right: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__mobile {
+        &-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            z-index: 100;
+            width: 100vw;
+            height: 100vh;
+            padding: 1rem;
+            background-color: $dark-gray;
+            color: $gray;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transform: translateX(100vw);
+            transition: all .3s ease-in-out;
+
+            &.active {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                align-self: center;
+                width: 100%;
+                padding: 1rem;
+            }
+
+            &-close {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+
+        &-menu {
+            width: 100%;
+            padding: 1rem 0;
+            list-style: none;
+            margin: 0;
+
+            &-item {
+                padding: .75rem 1rem;
+                font-size: 1.25rem;
+
+                a {
+                    color: $gray;
+                    text-decoration: none;                    
+                }
+
+            }
+        }
+
+        &-social {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            
+            &-icon {
+                font-size: 1.5rem;
+                padding: .5rem;
+            }
+        }
     }
 
     &__menu {
@@ -236,6 +310,10 @@
 
 @media screen and (min-width: $large) {
     .nav {
+        &__bars {
+            display: none;
+        }
+
         &__menu {
             display: flex;
         }

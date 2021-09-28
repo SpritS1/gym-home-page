@@ -21,7 +21,68 @@
 }
 .nav__logo {
   text-decoration: none;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+}
+.nav__bars {
+  color: #f2f2f2;
+  font-size: 2rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.nav__mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #333333;
+  color: #cccccc;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: all 0.3s ease-in-out;
+}
+.nav__mobile-dropdown.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.nav__mobile-dropdown-top {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  padding: 1rem;
+}
+.nav__mobile-dropdown-close {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.nav__mobile-menu {
+  width: 100%;
+  padding: 1rem 0;
+  list-style: none;
+  margin: 0;
+}
+.nav__mobile-menu-item {
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+}
+.nav__mobile-menu-item a {
+  color: #cccccc;
+  text-decoration: none;
+}
+.nav__mobile-social {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.nav__mobile-social-icon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
 .nav__menu {
   display: none;
@@ -195,6 +256,9 @@
   }
 }
 @media screen and (min-width: 992px) {
+  .nav__bars {
+    display: none;
+  }
   .nav__menu {
     display: flex;
   }

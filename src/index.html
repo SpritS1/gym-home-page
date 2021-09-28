@@ -7,12 +7,42 @@
     <title>Gym landing page</title>
     <link rel="stylesheet" href="./styles/css/main.css">
     <script src="https://kit.fontawesome.com/d20e710e26.js" crossorigin="anonymous"></script>
+    <script src='./scripts/navbar.js' defer></script>
 </head>
 <body>
     <nav class="nav">
         <a href="" class="nav__logo">
             <img src="./images/logo.png" alt="" class="nav__logo-img">
         </a>
+
+        <!-- Mobile menu -->
+        <i class="fas fa-bars nav__bars"></i>
+        <div class="nav__mobile-dropdown">
+            <div class="nav__mobile-dropdown-top">
+                <h2>MENU</h2>
+                <i class="fas fa-times nav__mobile-dropdown-close"></i>
+            </div>
+            <ul class="nav__mobile-menu">
+                <li class="nav__mobile-menu-item active"><a href=''> HOME </a></li>
+                <li class="nav__mobile-menu-item"><a href=''> O NAS </a></li>
+                <li class="nav__mobile-menu-item"><a href=''> GRAFIK </a></li>
+                <li class="nav__mobile-menu-item"><a href=''> CENNIK </a></li>
+                <li class="nav__mobile-menu-item"><a href=''> KONTAKT </a></li>
+            </ul>
+            <ul class="nav__mobile-social">
+                <li class="nav__mobile-social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="nav__mobile-social-icon">
+                    <i class="fab fa-instagram"></i>
+                </li>
+                <li class="nav__mobile-social-icon">
+                    <i class="fab fa-youtube"></i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Desktop menu -->
         <ul class="nav__menu">
             <li class="nav__menu-item active"><a href=''> HOME </a></li>
             <li class="nav__menu-item"><a href=''> O NAS </a></li>

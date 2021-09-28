@@ -21,10 +21,10 @@
 }
 .nav__logo {
   text-decoration: none;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 .nav__menu {
-  display: flex;
+  display: none;
   list-style: none;
   color: #f2f2f2;
 }
@@ -53,7 +53,7 @@
   transform: scaleX(1) translateY(0.5rem);
 }
 .nav__social {
-  display: flex;
+  display: none;
   list-style: none;
   color: #f2f2f2;
   padding-right: 2rem;
@@ -68,13 +68,13 @@
 }
 
 .landing {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center no-repeat url("../../images/landing_woman.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), right no-repeat url("../../images/landing_woman.jpg");
   background-size: cover;
   min-height: 100vh;
   width: 100%;
 }
 .landing__text {
-  padding: 30vh 0 0 10rem;
+  padding: 40vh 1rem 0 1rem;
   color: #f2f2f2;
   transition: transform 250ms ease-in-out;
   animation: appear 0.5s;
@@ -90,7 +90,7 @@
   }
 }
 .landing__text-top {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   position: relative;
 }
@@ -99,10 +99,10 @@
   border-left: 2px solid #c93636;
   height: 100%;
   position: absolute;
-  left: -1rem;
+  left: -0.5rem;
 }
 .landing__text-main {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 .landing__text-main--color {
@@ -175,7 +175,30 @@
 }
 
 @media screen and (min-width: 576px) {
+  .landing__text {
+    padding: 30vh 0 0 5rem;
+  }
+  .landing__text-top {
+    font-size: 1.25rem;
+  }
+  .landing__text-main {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    text-decoration: none;
+    padding-left: 2rem;
+  }
+  .landing__text {
+    padding: 30vh 0 0 10rem;
+  }
+}
+@media screen and (min-width: 992px) {
   .nav__menu {
-    display: none;
+    display: flex;
+  }
+  .nav__social {
+    display: flex;
   }
 }

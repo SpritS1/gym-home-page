@@ -18,11 +18,11 @@
 
     &__logo {
         text-decoration: none;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
 
     &__menu {
-        display: flex;
+        display: none;
         list-style: none;
         color: $white;
 
@@ -57,7 +57,7 @@
     }
 
     &__social {
-        display: flex;
+        display: none;
         list-style: none;
         color: $white;
         padding-right: 2rem;
@@ -75,13 +75,13 @@
 }
 
 .landing {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), center no-repeat url('../../images/landing_woman.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), right no-repeat url('../../images/landing_woman.jpg');
     background-size: cover;
     min-height: 100vh;
     width: 100%;
     
     &__text {
-        padding: 30vh 0 0 10rem;
+        padding: 40vh 1rem 0 1rem;
         color: $white;
         transition: transform 250ms ease-in-out;
         animation: appear .5s;
@@ -99,7 +99,7 @@
         }
 
         &-top {
-            font-size: 1.25rem;
+            font-size: 1rem;
             margin-bottom: .5rem;
             position: relative;
             
@@ -108,12 +108,12 @@
                 border-left: 2px solid $red;
                 height: 100%;
                 position: absolute;
-                left: -1rem;
+                left: -.5rem;
             }
         }
 
         &-main {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
         }
 
@@ -200,9 +200,48 @@
 }
 
 @media screen and (min-width: $small) {
+    .landing {
+        &__text {
+            padding: 30vh 0 0 5rem;
+
+            &-top {
+                font-size: 1.25rem;
+            }
+
+
+            &-main {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    .nav {  
+        &__logo {
+            text-decoration: none;
+            padding-left: 2rem;
+        }
+        
+        &__menu {
+        }
+    }
+
+    .landing {
+        &__text {
+            padding: 30vh 0 0 10rem;
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
     .nav {
         &__menu {
-            display: none;
+            display: flex;
+        }
+
+        &__social {
+            display: flex;
         }
     }
 }

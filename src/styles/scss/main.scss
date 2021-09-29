@@ -316,6 +316,7 @@
         background: $black;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         transition: transform .2s ease-in-out;
+        
         &:hover {
             transform: scale(1.05);
         }
@@ -335,6 +336,7 @@
     }
 
     &__img {
+        filter: brightness(.8);
         width: 100%;
         border-bottom: 4px solid $dark-gray;
     }

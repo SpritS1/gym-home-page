@@ -309,6 +309,7 @@
   font-weight: bold;
 }
 .our-offer__img {
+  filter: brightness(0.8);
   width: 100%;
   border-bottom: 4px solid #333333;
 }

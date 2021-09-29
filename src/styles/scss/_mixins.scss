@@ -1,5 +1,21 @@
 @use 'variables' as *;
 
+
+@mixin button {
+    color: $white;
+    background: $dark-gray;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    border: 2px solid $dark-gray;
+    transition: .25s;
+
+    &:hover {
+        background: unset;
+        border: 2px solid $dark-gray;
+    }
+}
+
 @mixin buttonRed {
     color: $white;
     background: $red;
@@ -25,19 +41,6 @@
     border: 2px solid $red;
     z-index: 1;
 
-    // &:after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background: $red;
-    //     transform: scale(0);  
-    //     transition: transform .3s ease-in-out;
-    //     z-index: -2;
-    // }
-
     &:before {
         content: "";
         position: absolute;
@@ -47,7 +50,7 @@
         height: 100%;
         background: $red;
         transform: scaleX(0);  
-        transition: transform .2s ease-in-out;
+        transition: transform .25s;
         z-index: -1;
     }
 
@@ -59,4 +62,26 @@
     //     background: $red;
     //     border: 2px solid $red;
     // }
+}
+
+@mixin sectionTextSecondary {
+    color: $red;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+@mixin sectionTextMain {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+@mixin section {
+    color: $white;
+    padding: 6rem 1rem;
+    text-align: center;
 }

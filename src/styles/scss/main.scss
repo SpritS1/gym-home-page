@@ -234,10 +234,8 @@
 }
 
 .why-us {
+    @include section;
     background: $black;
-    color: $white;
-    padding: 6rem 0;
-    text-align: center;
 
     &__text-secondary {
         margin-bottom: .5rem;
@@ -293,24 +291,15 @@
 }
 
 .our-offer {
+    @include section;
     background: $black-accent;
-    color: $white;
-    padding: 6rem 0;
 
     &__text-secondary {
-        color: $red;
-        text-transform: uppercase;
-        margin-bottom: .5rem;
-        text-align: center;
-        font-size: 1.1rem;
+        @include sectionTextSecondary
     }
 
     &__text-main {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        margin-bottom: 4rem;
-        padding: 0 2rem;
-        text-align: center;
+        @include sectionTextMain;
     }
 
     &__classes {
@@ -362,11 +351,11 @@
     background-size: cover;
     width: 100%;
     color: $white;
-    padding: 8rem 0;
+    padding: 8rem 1rem;
     text-align: center;
 
     &__main {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
     }
 
@@ -378,6 +367,98 @@
 
     &__cta-btn {
         @include buttonRedTransparent;
+    }
+}
+
+.pricing {
+    @include section;
+    background: $black;
+
+    &__text-secondary {
+        @include sectionTextSecondary;
+    }
+
+    &__text-main {
+        @include sectionTextMain;
+    }
+    
+    &__list {
+        gap: 2rem;
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+
+    &__offer--reccomended {
+        flex: 0 0 350px;
+        padding: 2rem;
+        background: $black-accent;
+        transition: .2s ease-in-out;
+        border: 4px solid rgba($red, .5);
+        transform: scale(1.05);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__offer{
+        flex: 0 0 350px;
+        padding: 2rem;
+        background: $black-accent;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &-name {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        &-price {
+            font-size: 4rem;
+            color: $red;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        &-duration {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &:before {
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-family: "Font Awesome 5 Free";
+                font-size: 1.5rem;
+                content: "\f017";
+                margin-right: .5rem;
+            }
+        }
+
+        &-benefits {
+            list-style-type: none;
+            margin-bottom: 2rem
+        }
+
+        &-benefit {
+            font-size: .9rem;
+            color: $gray;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__cta-btn {
+        @include buttonRed;
     }
 }
 
@@ -412,6 +493,16 @@
     .landing {
         &__text {
             padding: 30vh 0 0 10rem;
+        }
+    }
+
+    .join-us {
+        &__main {
+            font-size: 4rem;
+        }
+    
+        &__secondary {
+            font-size: 2rem;
         }
     }
 }

@@ -63,7 +63,7 @@
 
             &-close {
                 font-size: 2rem;
-                padding: 0 .5rem;
+                padding: 0 1rem;
                 cursor: pointer;
                 transition: color .25s ease-in-out;
 
@@ -484,6 +484,32 @@
             filter: brightness(.9);
         }
     }
+}
+
+.location {
+    @include section;
+    padding: 6rem 0 0 0;
+    background-color: $black-accent;
+
+    &__text-secondary {
+        @include sectionTextSecondary;
+    }
+
+    &__text-main {
+        @include sectionTextMain;
+    }
+
+    &__map {
+        width: 100%;
+        height: 50vh;
+        filter: brightness(.8);
+        transition: filter .2s ease-in-out;
+
+        &:hover {
+            filter: brightness(.9);
+        }
+    }
+
 }
 
 .footer {

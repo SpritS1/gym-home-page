@@ -7,7 +7,7 @@
     <title>Gym landing page</title>
     <link rel="stylesheet" href="./styles/css/main.css">
     <script src="https://kit.fontawesome.com/d20e710e26.js" crossorigin="anonymous"></script>
-    <script src='./scripts/navbar.js' defer></script>
+    <script type='module' src='./scripts/main.js'></script>    
 </head>
 <body>
     <nav class="nav">
@@ -218,6 +218,14 @@
         <img src="./images/gallery/7.jpg" alt="" class="gallery__photo">
     </section>
 
+    <section class="location">
+        <h3 class="location__text-secondary">Location</h3>
+        <h2 class="location__text-main">Where to find us?</h2>
+        <div class="gmap_canvas">
+            <iframe class="location__map" id="gmap_canvas" src="https://maps.google.com/maps?q=400-410%20N%20Crest%20Dr%20Los%20Angeles&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer__wrapper">
             <div class="footer__hours">
@@ -265,4 +273,8 @@
 
     </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
 </html>

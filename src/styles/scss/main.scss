@@ -9,13 +9,21 @@
 }
 
 .nav {
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     overflow: hidden;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+    transition: .25s ease-in-out;
+
+    &.scrolled {
+        background-color: $black;
+        padding: 1rem 0;
+        border-bottom: 2px solid $dark-gray;
+    }
 
     &__logo {
         text-decoration: none;

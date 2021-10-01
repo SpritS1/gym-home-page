@@ -25,11 +25,17 @@ export const mobileNavbar = () => {
         mobileBackground.classList.add('active');
     })
 
+    mobileBackground.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        mobileMenu.classList.remove('active');
+        mobileBackground.classList.remove('active');
+    })
+    
     mobileMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
         mobileMenu.classList.remove('active');
         mobileBackground.classList.remove('active');
-
     })
 }
 

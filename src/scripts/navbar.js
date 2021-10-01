@@ -3,6 +3,7 @@ export const mobileNavbar = () => {
     const mobileMenu = document.querySelector('.nav__mobile-dropdown')
     const mobileMenuClose = document.querySelector('.nav__mobile-dropdown-close');
     const navbar = document.querySelector('.nav');
+    const mobileBackground = document.querySelector('.nav__mobile-background')
 
     if (window.scrollY > 0) {
         navbar.classList.add('scrolled');
@@ -21,11 +22,14 @@ export const mobileNavbar = () => {
     bars.addEventListener('click', (e) => {
         e.preventDefault();
         mobileMenu.classList.add('active');
+        mobileBackground.classList.add('active');
     })
 
     mobileMenuClose.addEventListener('click', (e) => {
         e.preventDefault();
         mobileMenu.classList.remove('active');
+        mobileBackground.classList.remove('active');
+
     })
 }
 

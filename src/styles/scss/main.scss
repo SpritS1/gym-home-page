@@ -39,6 +39,24 @@
     }
 
     &__mobile {
+        &-background {
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 100;            
+            background: rgba(0, 0, 0, .6);
+            transition: .25s ease-in-out;
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
         &-dropdown {
             display: flex;
             flex-direction: column;
@@ -50,7 +68,7 @@
             padding: 1rem 0;
             background-color: $dark-gray;
             color: $gray;
-            left: 0;
+            right: 0;
             top: 0;
             opacity: 0;
             transform: translateX(100vw);
@@ -87,18 +105,19 @@
             margin: 0;
 
             &-item {
-                padding: .75rem 2rem;
                 font-size: 1.25rem;
                 cursor: pointer;
-                transition: background-color .25s ease-in-out;
-
-                &:hover {
-                    background-color: $black;
-                }
 
                 a {
+                    padding: .75rem 2rem;
                     color: $gray;
-                    text-decoration: none;                    
+                    text-decoration: none;  
+                    display: block;          
+                    transition: .25s ease-in-out;
+
+                    &:hover {
+                        background-color: $black;
+                    }
                 }
 
             }
@@ -137,7 +156,6 @@
 
         &-item {
             font-size: 1.25rem;
-            padding: .5rem 1rem;
 
             &:after {
                 display: block;
@@ -148,10 +166,12 @@
             }
 
             &:hover:after {
-                transform: scaleX(1) translateY(.5rem);  
+                transform: scaleX(.75) translateY(.5rem);  
             }
 
             a {
+                padding: .5rem 1rem;
+                display: block;
                 text-decoration: none;
                 color: inherit;
             }
@@ -159,7 +179,7 @@
             &.active {
                 cursor: default;
                 &:after {
-                    transform: scaleX(1) translateY(.5rem);  
+                    transform: scaleX(.75) translateY(.5rem);  
                 }
             }
         }
@@ -640,6 +660,12 @@
 // Responsive
 
 @media screen and (min-width: $small) {
+    .nav {
+        &__mobile-dropdown {
+            max-width: 300px;
+        }
+    }
+
     .landing {
         &__text {
             padding: 30vh 0 0 5rem;

@@ -3,6 +3,11 @@ export const mobileNavbar = () => {
     const mobileMenu = document.querySelector('.nav__mobile-dropdown')
     const mobileMenuClose = document.querySelector('.nav__mobile-dropdown-close');
     const navbar = document.querySelector('.nav');
+
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    }
+
     window.addEventListener('scroll', (e) => {
         e.preventDefault();
 

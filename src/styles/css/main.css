@@ -107,6 +107,11 @@
 .nav__mobile-social-icon {
   font-size: 1.5rem;
   padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+.nav__mobile-social-icon:hover {
+  color: #c93636;
 }
 .nav__menu {
   display: none;

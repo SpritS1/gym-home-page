@@ -314,7 +314,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-        padding: 0 2rem;
         margin: 0 auto;
         max-width: 1200px;
         list-style: none;
@@ -325,19 +324,19 @@
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         transition: transform .2s ease-in-out;
         
-        &:hover {
-            transform: scale(1.05);
-        }
+        // &:hover {
+        //     transform: scale(1.05);
+        // }
 
         &-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
         }
 
         &-name {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             font-weight: bold;
         }
@@ -390,10 +389,12 @@
 
     &__text-main {
         @include sectionTextMain;
+        padding: 0;
     }
     
     &__list {
         gap: 2rem;
+        padding: .5rem;
         display: flex; 
         flex-wrap: wrap;
         align-items: center;
@@ -402,27 +403,19 @@
     }
 
     &__offer--reccomended {
-        flex: 0 0 350px;
+        flex: 1 0 250px;
         padding: 2rem;
         background: $black-accent;
         transition: .2s ease-in-out;
         border: 4px solid rgba($red, .5);
         transform: scale(1.05);
-
-        &:hover {
-            transform: scale(1.1);
-        }
     }
 
     &__offer{
-        flex: 0 0 350px;
+        flex: 1 0 250px;
         padding: 2rem;
         background: $black-accent;
         transition: .2s ease-in-out;
-
-        &:hover {
-            transform: scale(1.05);
-        }
 
         &-name {
             font-size: 2rem;
@@ -585,7 +578,7 @@
     }
 
     &__newsletter {
-        flex: 1 0 325px;
+        flex: 1 0 250px;
         
         &-title {
             font-size: 2rem;
@@ -595,6 +588,7 @@
         &-input {
             padding: .75rem;
             border: $white 2px solid;
+            width: 100%;
             font-size: 1rem;
             margin-bottom: 1rem;
             outline: none;
@@ -602,7 +596,9 @@
 
         &-submit-btn {
             @include buttonRed;
+            width: 100%;
             padding: .75rem;
+            margin-bottom: .5rem;
             font-size: 1rem;
         }
     }
@@ -650,6 +646,18 @@
             }
         }
     }
+
+    .footer {
+        &__newsletter {
+            &-input {
+                width: auto
+            }
+    
+            &-submit-btn {
+                width: auto;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: $medium) {
@@ -664,6 +672,34 @@
     .landing {
         &__text {
             padding: 30vh 0 0 10rem;
+        }
+    }
+
+    .our-offer {
+        &__class {
+                    
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .pricing {
+        &__offer {
+            flex: 0 0 350px;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        
+
+        &__offer--reccomended {
+            flex: 0 0 350px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -725,7 +761,7 @@
 
     .our-offer {
         &__classes {
-            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         }
     }
 

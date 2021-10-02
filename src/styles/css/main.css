@@ -182,7 +182,7 @@
   width: 100%;
 }
 .landing__text {
-  padding: 40vh 1rem 0 1rem;
+  padding: 30vh 1rem 0 1rem;
   color: #f2f2f2;
   transition: transform 250ms ease-in-out;
   animation: appear 0.5s;
@@ -198,7 +198,6 @@
   }
 }
 .landing__text-top {
-  font-size: 1rem;
   margin-bottom: 0.5rem;
   position: relative;
 }
@@ -660,7 +659,7 @@
   }
 
   .landing__text {
-    padding: 30vh 0 0 5rem;
+    padding: 35vh 0 0 5rem;
   }
   .landing__text-top {
     font-size: 1.25rem;

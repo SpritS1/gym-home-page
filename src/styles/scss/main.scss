@@ -16,12 +16,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0 1rem 0;
+    padding: 2rem 0;
     transition: .25s ease-in-out;
 
     &.scrolled {
         background-color: $black;
-        transform: translateY(-1rem);
+        padding: 1rem 0;
         border-bottom: 2px solid $dark-gray;
     }
 

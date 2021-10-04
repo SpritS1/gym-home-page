@@ -18,12 +18,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   transition: 0.25s ease-in-out;
 }
 .nav.scrolled {
   background-color: #0d0d0d;
-  transform: translateY(-1rem);
+  padding: 1rem 0;
   border-bottom: 2px solid #333333;
 }
 .nav__logo {
